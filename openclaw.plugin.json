@@ -1,0 +1,27 @@
+{
+  "id": "openclaw-a2a-server",
+  "name": "A2A Server",
+  "description": "Bearer-authenticated standards-profile A2A server for OpenClaw.",
+  "version": "0.1.0",
+  "kind": "plugin",
+  "skills": [
+    "."
+  ],
+  "uiHints": {
+    "sensitiveFields": [
+      "authToken"
+    ]
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "host": { "type": "string", "default": "127.0.0.1" },
+      "port": { "type": "number", "minimum": 1, "maximum": 65535, "default": 8787 },
+      "publicBaseUrl": { "type": "string" },
+      "authToken": { "type": "string" },
+      "taskTtlMs": { "type": "number", "minimum": 1000, "maximum": 86400000, "default": 3600000 }
+    },
+    "required": ["authToken"]
+  }
+}
