@@ -6,6 +6,9 @@ export interface ServerConfig {
   publicBaseUrl?: string;
   authToken: string;
   taskTtlMs: number;
+  semanticMode: boolean;
+  semanticResponderUrl?: string;
+  semanticTimeoutMs: number;
 }
 
 export interface JsonRpcRequest {

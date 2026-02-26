@@ -20,7 +20,10 @@
       "port": { "type": "number", "minimum": 1, "maximum": 65535, "default": 8787 },
       "publicBaseUrl": { "type": "string" },
       "authToken": { "type": "string" },
-      "taskTtlMs": { "type": "number", "minimum": 1000, "maximum": 86400000, "default": 3600000 }
+      "taskTtlMs": { "type": "number", "minimum": 1000, "maximum": 86400000, "default": 3600000 },
+      "semanticMode": { "type": "boolean", "default": false },
+      "semanticResponderUrl": { "type": "string" },
+      "semanticTimeoutMs": { "type": "number", "minimum": 1000, "maximum": 120000, "default": 15000 }
     },
     "required": ["authToken"]
   }
